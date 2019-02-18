@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="88643e63d1ec47ae9802f163e8d048ef" Name="ConsultorioDBDiagram">
+        <EntityTypeShape EntityType="Consultorio_DBModel.Cita" Width="1.5" PointX="9.375" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Consultorio_DBModel.CondicionFisica" Width="1.5" PointX="18.125" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Consultorio_DBModel.Consulta" Width="1.5" PointX="12.75" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Consultorio_DBModel.Diagnostico" Width="1.5" PointX="14.875" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Consultorio_DBModel.Doctor" Width="1.5" PointX="9.375" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Consultorio_DBModel.Domicilio" Width="1.5" PointX="5.25" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="Consultorio_DBModel.Especialidad" Width="1.5" PointX="12.75" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Consultorio_DBModel.Estado_Civil" Width="1.5" PointX="5.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Consultorio_DBModel.ExamenFisico" Width="1.5" PointX="15.375" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Consultorio_DBModel.Genero" Width="1.5" PointX="5.25" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Consultorio_DBModel.Municipio" Width="1.5" PointX="3" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="Consultorio_DBModel.Paciente" Width="1.5" PointX="7.5" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Consultorio_DBModel.Provincia" Width="1.5" PointX="3" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Consultorio_DBModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Consultorio_DBModel.Tipo_Paciente" Width="1.5" PointX="5.25" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Consultorio_DBModel.Tipo_Usuario" Width="1.5" PointX="3" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Consultorio_DBModel.Tratamiento" Width="1.5" PointX="12.75" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Consultorio_DBModel.Usuario" Width="1.5" PointX="5.75" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="Consultorio_DBModel.Zona" Width="1.5" PointX="9.75" PointY="10.75" IsExpanded="true" />
+        <AssociationConnector Association="Consultorio_DBModel.FK_Cita_Paciente" ManuallyRouted="false" />
+        <AssociationConnector Association="Consultorio_DBModel.FK_CondicionFisica_ExamenFisico" ManuallyRouted="false" />
+        <AssociationConnector Association="Consultorio_DBModel.FK_Consulta_Doctor" ManuallyRouted="false" />
+        <AssociationConnector Association="Consultorio_DBModel.FK_Consulta_Paciente" ManuallyRouted="false" />
+        <AssociationConnector Association="Consultorio_DBModel.FK_Diagnostico_Consulta" ManuallyRouted="false" />
+        <AssociationConnector Association="Consultorio_DBModel.FK_ExamenFisico_Consulta" ManuallyRouted="false" />
+        <AssociationConnector Association="Consultorio_DBModel.FK_Tratamiento_Consulta" ManuallyRouted="false" />
+        <AssociationConnector Association="Consultorio_DBModel.FK_Usuario_Doctor" ManuallyRouted="false" />
+        <AssociationConnector Association="Consultorio_DBModel.FK_Paciente_Domicilio" ManuallyRouted="false" />
+        <AssociationConnector Association="Consultorio_DBModel.FK_Sector_Municipio" ManuallyRouted="false" />
+        <AssociationConnector Association="Consultorio_DBModel.FK_Paciente_EstadoCivil" ManuallyRouted="false" />
+        <AssociationConnector Association="Consultorio_DBModel.FK_Paciente_Genero" ManuallyRouted="false" />
+        <AssociationConnector Association="Consultorio_DBModel.FK_Municipio_Provincia" ManuallyRouted="false" />
+        <AssociationConnector Association="Consultorio_DBModel.FK_Paciente_TipoPaciente" ManuallyRouted="false" />
+        <AssociationConnector Association="Consultorio_DBModel.FK_Paciente_Zona" ManuallyRouted="false" />
+        <AssociationConnector Association="Consultorio_DBModel.FK_Usuario_TipoUsuario" ManuallyRouted="false" />
+        <AssociationConnector Association="Consultorio_DBModel.Doctor_Especialiades" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

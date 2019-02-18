@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4EAA0C08-463F-48F3-90F2-D7CE03C977DA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ConsultorioLibrary</RootNamespace>
+    <AssemblyName>ConsultorioLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CapaDatos\Busqueda\BusquedaUsuario.cs" />
+    <Compile Include="CapaDatos\clActualizacion.cs" />
+    <Compile Include="CapaDatos\clBusquedaAvanzada.cs" />
+    <Compile Include="CapaDatos\clConexionBD.cs" />
+    <Compile Include="CapaDatos\clBusqueda.cs" />
+    <Compile Include="CapaDatos\clEliminacion.cs" />
+    <Compile Include="CapaDatos\clRegistro.cs" />
+    <Compile Include="CapaDatos\Registro\RegistroDoctor.cs" />
+    <Compile Include="CapaDatos\Registro\RegistroUsuario.cs" />
+    <Compile Include="CapaLogica\clCita.cs" />
+    <Compile Include="CapaLogica\clCiudad.cs" />
+    <Compile Include="CapaLogica\clCondicionFisica.cs" />
+    <Compile Include="CapaLogica\clConsulta.cs" />
+    <Compile Include="CapaLogica\clDiagnostico.cs" />
+    <Compile Include="CapaLogica\clDomicilio.cs" />
+    <Compile Include="CapaLogica\clEstadoCivil.cs" />
+    <Compile Include="CapaLogica\clExamenFisico.cs" />
+    <Compile Include="CapaLogica\clGenero.cs" />
+    <Compile Include="CapaLogica\clPaciente.cs" />
+    <Compile Include="CapaLogica\clPersona.cs" />
+    <Compile Include="CapaLogica\clProvincia.cs" />
+    <Compile Include="CapaLogica\clSector.cs" />
+    <Compile Include="CapaLogica\clTipoPaciente.cs" />
+    <Compile Include="CapaLogica\clTratamiento.cs" />
+    <Compile Include="CapaLogica\Usuario.cs" />
+    <Compile Include="CapaLogica\clZona.cs" />
+    <Compile Include="Consultorio_DBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Consultorio_DBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Fachada\BusquedaConsulta\clFachadaBusquedaConsultas.cs" />
+    <Compile Include="Fachada\BusquedaPaciente\clFachadaBusquedaPaciente.cs" />
+    <Compile Include="Fachada\clFachadaCita.cs" />
+    <Compile Include="Fachada\clFachadaCiudad.cs" />
+    <Compile Include="Fachada\clFachadaConsulta.cs" />
+    <Compile Include="Fachada\clFachadaEstadoCivil.cs" />
+    <Compile Include="Fachada\clFachadaGenero.cs" />
+    <Compile Include="Fachada\clFachadaPaciente.cs" />
+    <Compile Include="Fachada\clFachadaProvincia.cs" />
+    <Compile Include="Fachada\clFachadaSector.cs" />
+    <Compile Include="Fachada\clFachadaTipoPaciente.cs" />
+    <Compile Include="Fachada\clFachadaZona.cs" />
+    <Compile Include="Fachada\FachadaDoctor\FachadaRegistroDoctor.cs" />
+    <Compile Include="Fachada\FachadaUsuario\Autenticacion.cs" />
+    <Compile Include="Fachada\FachadaUsuario\FachadaRegistroUsuario.cs" />
+    <Compile Include="Model\Busqueda_ConsultaCompleta_Result.cs">
+      <DependentUpon>ConsultorioDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Busqueda_Paciente_Result.cs">
+      <DependentUpon>ConsultorioDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Cita.cs">
+      <DependentUpon>ConsultorioDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CondicionFisica.cs">
+      <DependentUpon>ConsultorioDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Consulta.cs">
+      <DependentUpon>ConsultorioDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ConsultorioDB.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConsultorioDB.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ConsultorioDB.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConsultorioDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ConsultorioDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConsultorioDB.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Diagnostico.cs">
+      <DependentUpon>ConsultorioDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Doctor.cs">
+      <DependentUpon>ConsultorioDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Domicilio.cs">
+      <DependentUpon>ConsultorioDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Especialidad.cs">
+      <DependentUpon>ConsultorioDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Estado_Civil.cs">
+      <DependentUpon>ConsultorioDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ExamenFisico.cs">
+      <DependentUpon>ConsultorioDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Genero.cs">
+      <DependentUpon>ConsultorioDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Municipio.cs">
+      <DependentUpon>ConsultorioDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Paciente.cs">
+      <DependentUpon>ConsultorioDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Provincia.cs">
+      <DependentUpon>ConsultorioDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ResumenConsulta_Result.cs">
+      <DependentUpon>ConsultorioDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\SIUD_Cita_Result.cs">
+      <DependentUpon>ConsultorioDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\SIUD_CondicionFisica_Result.cs">
+      <DependentUpon>ConsultorioDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\SIUD_ConsultaCompleta_Result.cs">
+      <DependentUpon>ConsultorioDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\SIUD_Consulta_Result.cs">
+      <DependentUpon>ConsultorioDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\SIUD_DetalleConsulta_Result.cs">
+      <DependentUpon>ConsultorioDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\SIUD_Domicilio_Result.cs">
+      <DependentUpon>ConsultorioDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\SIUD_EstadoCivil_Result.cs">
+      <DependentUpon>ConsultorioDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\SIUD_ExamenFisico_Result.cs">
+      <DependentUpon>ConsultorioDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\SIUD_GENERO_Result.cs">
+      <DependentUpon>ConsultorioDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\SIUD_Municipio_Result.cs">
+      <DependentUpon>ConsultorioDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\SIUD_Paciente_Result.cs">
+      <DependentUpon>ConsultorioDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\SIUD_Provincia_Result.cs">
+      <DependentUpon>ConsultorioDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\SIUD_TipoPaciente_Result.cs">
+      <DependentUpon>ConsultorioDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\SIUD_USUARIO_Result.cs">
+      <DependentUpon>ConsultorioDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\SIUD_Zona_Result.cs">
+      <DependentUpon>ConsultorioDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>ConsultorioDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\sp_helpdiagrams_Result.cs">
+      <DependentUpon>ConsultorioDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\sysdiagrams.cs">
+      <DependentUpon>ConsultorioDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Tipo_Paciente.cs">
+      <DependentUpon>ConsultorioDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Tipo_Usuario.cs">
+      <DependentUpon>ConsultorioDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Tratamiento.cs">
+      <DependentUpon>ConsultorioDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Usuario.cs">
+      <DependentUpon>ConsultorioDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Zona.cs">
+      <DependentUpon>ConsultorioDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EntityDeploy Include="Model\ConsultorioDB.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ConsultorioDB.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="Consultorio_DBDataSet.xsc">
+      <DependentUpon>Consultorio_DBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Consultorio_DBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Consultorio_DBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Consultorio_DBDataSet.xss">
+      <DependentUpon>Consultorio_DBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Model\ConsultorioDB.edmx.diagram">
+      <DependentUpon>ConsultorioDB.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Model\ConsultorioDB.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ConsultorioDB.Context.cs</LastGenOutput>
+      <DependentUpon>ConsultorioDB.edmx</DependentUpon>
+    </Content>
+    <Content Include="Model\ConsultorioDB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ConsultorioDB.edmx</DependentUpon>
+      <LastGenOutput>ConsultorioDB.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
